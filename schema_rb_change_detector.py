@@ -1,4 +1,3 @@
-#%%
 import os
 import sys
 import json
@@ -16,8 +15,6 @@ load_dotenv(dotenv_path=env_path)
 from logging import log
 from logging import Logger
 
-
-#%%
 
 # ====================================================
 # defining global variables
@@ -41,31 +38,28 @@ yesterday=yesterday.strftime("%y_%m_%d")
 
 
 
-
+# ====================================================
 # define file names to be compared
+# ====================================================
+
 file_name_1=f'schema_{yesterday}.rb'
 file_name_2=f'schema_{current_date}.rb'
 
 
 
 
-
+# ====================================================
 # create log files
+# ====================================================
 change_log_filename = f'change_log_{current_date}.txt'
 project_name_and_date= ' Database Schema Change: ' + current_date_and_time + '\n\n'
 change_log= open(change_log_filename,'w')
 change_log.write(project_name_and_date)
 
 
-
-
-
-#%%
-
 # ====================================================
 # defining functions
 # ====================================================
-
 
 #log process
 
